@@ -1,8 +1,27 @@
 {
   "name": "be-oosoom",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Notify element/behaviors when to be engaged.",
+  "keywords": [
+    "web-components",
+    "web-component",
+    "custom-element",
+    "custom-elements"
+  ],
+  "main": "be-oosoom.js",
+  "module": "be-oosoom.js",  
+  "files": [
+    "*.*"
+  ],
+  "exports": {
+    ".": "./be-oosoom.js",
+    "./be-oosoom.js": "./be-oosoom.js"
+  },
+  "types": "types.d.ts",
+  "dependencies": {
+    "be-decorated": "0.0.150",
+    "be-hive": "0.0.58"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
