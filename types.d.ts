@@ -1,10 +1,16 @@
 import {BeDecoratedProps, MinimalProxy} from 'be-decorated/types';
+import { 
+    BeInterseciontalEndUserProps, 
+    BeIntersectionalVirtualProps,
+    BeIntersectionalActions,
+} from 'be-intersectional/types';
 
-export interface BeOosoomEndUserProps {
+export interface BeOosoomEndUserProps extends BeInterseciontalEndUserProps{}
 
+export interface BeOosoomVirtualProps extends BeIntersectionalVirtualProps{
+    isNotIntersecting: boolean;
+    isNotIntersectingEcho: boolean;
 }
-
-export interface BeOosoomVirtualProps extends BeOosoomEndUserProps, MinimalProxy{}
 
 export type Proxy = Element & BeOosoomVirtualProps;
 
@@ -14,6 +20,7 @@ export interface BeOosoomProxy extends BeOosoomActions, BeOosoomVirtualProps{
 
 export type BOP = BeOosoomProxy;
 
-export interface BeOosoomActions{
-    
+export interface BeOosoomActions extends BeIntersectionalActions{
+    onNotIntersectingEcho(bop: BOP): void;
+    onNotIntersecting
 }
