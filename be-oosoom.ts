@@ -4,7 +4,7 @@ import {BeIntersectional} from 'be-intersectional/be-intersectional.js';
 import {BOP, BeOosoomActions, BeOosoomEndUserProps, BeOosoomProxy, BeOosoomVirtualProps, Proxy} from './types';
 
 export class BeOosoom extends BeIntersectional implements BeOosoomActions{
-    onIntersecting(bop: BeOosoomProxy): void {
+    async onIntersecting(bop: BeOosoomProxy) {
         this.setProps(bop);
     }
 
@@ -56,7 +56,7 @@ define<BeOosoomVirtualProps & BeDecoratedProps<BeOosoomVirtualProps, BeOosoomAct
             virtualProps: [
                 'options', 'isIntersecting', 'isIntersectingEcho',
                 'enterDelay', 'rootClosest',
-                'isNotIntersecting', 'isNotIntersectingEcho'
+                'isNotIntersecting', 'isNotIntersectingEcho', 'observeClosest'
             ],
             finale: 'finale',
             proxyPropDefaults:{

@@ -2,7 +2,7 @@ import { register } from 'be-hive/register.js';
 import { define } from 'be-decorated/be-decorated.js';
 import { BeIntersectional } from 'be-intersectional/be-intersectional.js';
 export class BeOosoom extends BeIntersectional {
-    onIntersecting(bop) {
+    async onIntersecting(bop) {
         this.setProps(bop);
     }
     onIntersectingChange({ isIntersecting, proxy }) {
@@ -47,7 +47,7 @@ define({
             virtualProps: [
                 'options', 'isIntersecting', 'isIntersectingEcho',
                 'enterDelay', 'rootClosest',
-                'isNotIntersecting', 'isNotIntersectingEcho'
+                'isNotIntersecting', 'isNotIntersectingEcho', 'observeClosest'
             ],
             finale: 'finale',
             proxyPropDefaults: {

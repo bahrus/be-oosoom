@@ -21,7 +21,7 @@
   "dependencies": {
     "be-decorated": "0.0.150",
     "be-hive": "0.0.58",
-    "be-intersectional": "0.0.58"
+    "be-intersectional": "0.0.59"
   },
   "devDependencies": {
     "@playwright/test": "1.25.1",
