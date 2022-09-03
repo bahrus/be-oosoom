@@ -2,7 +2,6 @@ import {register} from 'be-hive/register.js';
 import {define, BeDecoratedProps} from 'be-decorated/be-decorated.js';
 import {BeIntersectional} from 'be-intersectional/be-intersectional.js';
 import {BOP, BeOosoomActions, BeOosoomEndUserProps, BeOosoomProxy, BeOosoomVirtualProps, Proxy} from './types';
-import { BeIntersectionalProxy } from '../be-intersectional/types';
 
 export class BeOosoom extends BeIntersectional implements BeOosoomActions{
     onIntersecting(bop: BeOosoomProxy): void {
