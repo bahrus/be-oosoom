@@ -23,4 +23,5 @@ export type BOP = BeOosoomProxy;
 export interface BeOosoomActions extends BeIntersectionalActions{
     onNotIntersectingEcho(bop: BOP): void;
     onNotIntersecting(bop: BOP): void;
+    onIntersectingChange(bop: BOP): void;
 }

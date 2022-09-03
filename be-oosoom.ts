@@ -73,8 +73,14 @@ define<BeOosoomVirtualProps & BeDecoratedProps<BeOosoomVirtualProps, BeOosoomAct
             onIntersecting: {
                 ifAllOf: ['isIntersecting', 'isIntersectingEcho'],
             },
+            onIntersectingChange:{
+                ifKeyIn: ['isIntersecting']
+            },
             onNotIntersecting: {
                 ifAllOf: ['isNotIntersecting', 'isNotIntersectingEcho'],
+            },
+            onNotIntersectingEcho: {
+                ifKeyIn: ['isIntersectingEcho']
             }
         }
     },
