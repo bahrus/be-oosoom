@@ -1,19 +1,11 @@
 import {register} from 'be-hive/register.js';
 import {define, BeDecoratedProps} from 'be-decorated/be-decorated.js';
-import {BeIntersectional} from 'be-intersectional/be-intersectional.js';
+import {BeIntersectional, proxyPropDefaults, actions} from 'be-intersectional/be-intersectional.js';
 import {BOP, BeOosoomActions, BeOosoomEndUserProps, BeOosoomProxy, BeOosoomVirtualProps, Proxy} from './types';
 
 export class BeOosoom extends BeIntersectional implements BeOosoomActions{
     async onIntersecting(bop: BeOosoomProxy) {
         this.setProps(bop);
-    }
-
-    onIntersectingChange({isIntersecting, proxy}: BOP){
-        proxy.isNotIntersecting = !isIntersecting;
-    }
-
-    onNotIntersectingEcho({isIntersectingEcho, proxy}: BeOosoomProxy): void {
-        proxy.isNotIntersectingEcho = !isIntersectingEcho;
     }
 
     onNotIntersecting(bop: BeOosoomProxy): void {
@@ -59,30 +51,9 @@ define<BeOosoomVirtualProps & BeDecoratedProps<BeOosoomVirtualProps, BeOosoomAct
                 'isNotIntersecting', 'isNotIntersectingEcho', 'observeClosest'
             ],
             finale: 'finale',
-            proxyPropDefaults:{
-                options: {
-                    threshold: 0,
-                    rootMargin: '0px',
-                },
-                enterDelay: 16,
-                exitDelay: 16
-            }
+            proxyPropDefaults,
         },
-        actions:{
-            onOptions: 'options',
-            onIntersecting: {
-                ifAllOf: ['isIntersecting', 'isIntersectingEcho'],
-            },
-            onIntersectingChange:{
-                ifKeyIn: ['isIntersecting']
-            },
-            onNotIntersecting: {
-                ifAllOf: ['isNotIntersecting', 'isNotIntersectingEcho'],
-            },
-            onNotIntersectingEcho: {
-                ifKeyIn: ['isIntersectingEcho']
-            }
-        }
+        actions
     },
     complexPropDefaults: {
         controller: BeOosoom

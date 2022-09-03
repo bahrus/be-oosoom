@@ -7,10 +7,7 @@ import {
 
 export interface BeOosoomEndUserProps extends BeInterseciontalEndUserProps{}
 
-export interface BeOosoomVirtualProps extends BeIntersectionalVirtualProps{
-    isNotIntersecting: boolean;
-    isNotIntersectingEcho: boolean;
-}
+export interface BeOosoomVirtualProps extends BeIntersectionalVirtualProps{}
 
 export type Proxy = Element & BeOosoomVirtualProps;
 
@@ -20,8 +17,4 @@ export interface BeOosoomProxy extends BeOosoomActions, BeOosoomVirtualProps{
 
 export type BOP = BeOosoomProxy;
 
-export interface BeOosoomActions extends BeIntersectionalActions{
-    onNotIntersectingEcho(bop: BOP): void;
-    onNotIntersecting(bop: BOP): void;
-    onIntersectingChange(bop: BOP): void;
-}
+export interface BeOosoomActions extends BeIntersectionalActions{}
