@@ -58,7 +58,15 @@ define<BeOosoomVirtualProps & BeDecoratedProps<BeOosoomVirtualProps, BeOosoomAct
                 'enterDelay', 'rootClosest',
                 'isNotIntersecting', 'isNotIntersectingEcho'
             ],
-            finale: 'finale'
+            finale: 'finale',
+            proxyPropDefaults:{
+                options: {
+                    threshold: 0,
+                    rootMargin: '0px',
+                },
+                enterDelay: 16,
+                exitDelay: 16
+            }
         },
         actions:{
             onOptions: 'options',

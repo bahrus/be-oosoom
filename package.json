@@ -23,8 +23,17 @@
     "be-hive": "0.0.58",
     "be-intersectional": "0.0.58"
   },
+  "devDependencies": {
+    "@playwright/test": "1.25.1",
+    "may-it-serve": "0.0.2",
+    "xtal-editor": "0.0.193",
+    "@skypack/package-check": "0.2.2",
+    "xtal-shell": "0.0.27"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node node_modules/may-it-serve/serve.js",
+    "test": "playwright test",
+    "package-check": "package-check"
   },
   "repository": {
     "type": "git",
