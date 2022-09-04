@@ -51,7 +51,10 @@ define<BeOosoomVirtualProps & BeDecoratedProps<BeOosoomVirtualProps, BeOosoomAct
                 'isNotIntersecting', 'isNotIntersectingEcho', 'observeClosest'
             ],
             finale: 'finale',
-            proxyPropDefaults,
+            proxyPropDefaults: {
+                ...proxyPropDefaults,
+                isIntersecting: true
+            }
         },
         actions
     },
