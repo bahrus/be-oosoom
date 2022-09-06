@@ -1,18 +1,18 @@
 import {register} from 'be-hive/register.js';
 import {define, BeDecoratedProps} from 'be-decorated/be-decorated.js';
 import {BeIntersectional, proxyPropDefaults, actions} from 'be-intersectional/be-intersectional.js';
-import {BOP, BeOosoomActions, BeOosoomEndUserProps, BeOosoomProxy, BeOosoomVirtualProps, Proxy} from './types';
+import {PP, Actions, BeOosoomEndUserProps, ProxyProps, BeOosoomVirtualProps, Proxy} from './types';
 
-export class BeOosoom extends BeIntersectional implements BeOosoomActions{
-    async onIntersecting(bop: BeOosoomProxy) {
+export class BeOosoom extends BeIntersectional implements Actions{
+    async onIntersecting(bop: ProxyProps) {
         this.setProps(bop);
     }
 
-    onNotIntersecting(bop: BeOosoomProxy): void {
+    onNotIntersecting(bop: ProxyProps): void {
         this.setProps(bop);
     }
 
-    setProps({isIntersecting, self}: BeOosoomProxy): void {
+    setProps({isIntersecting, self}: ProxyProps): void {
         this.doProp(self, isIntersecting);
         const beDecorated = (<any>self).beDecorated;
         if(beDecorated === undefined) return;
@@ -38,7 +38,7 @@ const ifWantsToBe = 'oosoom';
 
 const upgrade = '*';
 
-define<BeOosoomVirtualProps & BeDecoratedProps<BeOosoomVirtualProps, BeOosoomActions>, BeOosoomActions>({
+define<BeOosoomVirtualProps & BeDecoratedProps<BeOosoomVirtualProps, Actions>, Actions>({
     config:{
         tagName,
         propDefaults: {

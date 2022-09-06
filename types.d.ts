@@ -1,8 +1,8 @@
 import {BeDecoratedProps, MinimalProxy} from 'be-decorated/types';
 import { 
-    BeInterseciontalEndUserProps, 
-    BeIntersectionalVirtualProps,
-    BeIntersectionalActions,
+    EndUserProps as BeInterseciontalEndUserProps, 
+    VirtualProps as BeIntersectionalVirtualProps,
+    Actions as BeIntersectionalActions,
 } from 'be-intersectional/types';
 
 export interface BeOosoomEndUserProps extends BeInterseciontalEndUserProps{}
@@ -11,10 +11,10 @@ export interface BeOosoomVirtualProps extends BeIntersectionalVirtualProps{}
 
 export type Proxy = Element & BeOosoomVirtualProps;
 
-export interface BeOosoomProxy extends BeOosoomActions, BeOosoomVirtualProps{
+export interface ProxyProps extends Actions, BeOosoomVirtualProps{
     proxy: Proxy;
 }
 
-export type BOP = BeOosoomProxy;
+export type PP = ProxyProps;
 
-export interface BeOosoomActions extends BeIntersectionalActions{}
+export interface Actions extends BeIntersectionalActions{}
