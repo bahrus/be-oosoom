@@ -1,4 +1,14 @@
-# be-oosoom [TODO]
+# be-oosoom 
+
+<a href="https://nodei.co/npm/be-oosoom/"><img src="https://nodei.co/npm/be-oosoom.png"></a>
+
+Size of package, including custom element behavior framework (be-decorated):
+
+[![How big is this package in your project?](https://img.shields.io/bundlephobia/minzip/be-oosoom?style=for-the-badge)](https://bundlephobia.com/result?p=be-oosoom)
+
+Size of new code in this package:
+
+<img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/be-oosoom?compression=gzip">
 
 *be-oosoom* is a [be-decorated-based](https://github.com/bahrus/be-decorated) decorator/behavior that monitors the visibility of the element it adorns.  When the visibility changes, it:
 
