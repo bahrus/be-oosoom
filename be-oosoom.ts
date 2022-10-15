@@ -1,5 +1,5 @@
 import {register} from 'be-hive/register.js';
-import {define, BeDecoratedProps} from 'be-decorated/be-decorated.js';
+import {define, BeDecoratedProps} from 'be-decorated/DE.js';
 import {BeIntersectional, proxyPropDefaults, actions} from 'be-intersectional/be-intersectional.js';
 import {PP, Actions, BeOosoomEndUserProps, ProxyProps, BeOosoomVirtualProps, Proxy} from './types';
 
