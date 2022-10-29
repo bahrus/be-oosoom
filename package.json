@@ -1,6 +1,6 @@
 {
   "name": "be-oosoom",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Notify element/behaviors when to be engaged.",
   "keywords": [
     "web-components",
