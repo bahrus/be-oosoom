@@ -19,9 +19,9 @@
   },
   "types": "types.d.ts",
   "dependencies": {
-    "be-decorated": "0.0.182",
-    "be-hive": "0.0.76",
-    "be-intersectional": "0.0.69"
+    "be-decorated": "0.0.190",
+    "be-hive": "0.0.77",
+    "be-intersectional": "0.0.70"
   },
   "devDependencies": {
     "@playwright/test": "1.27.1",
