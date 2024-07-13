@@ -1,4 +1,4 @@
-# be-oosoom 
+# be-oosoom (😎)
 
 [![Playwright Tests](https://github.com/bahrus/be-oosoom/actions/workflows/CI.yml/badge.svg?branch=baseline)](https://github.com/bahrus/be-oosoom/actions/workflows/CI.yml)
 
